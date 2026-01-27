@@ -100,12 +100,13 @@ is attached with the assignment submission.
 
 ## 👤 Author
 
-**Full Name:** Md Sayed
-** ID :** 0432320005101148
+**Full Name:** **Md Sayed**
+
+**ID :** **0432320005101148**
 **Course:** Graphics Lab
 **Deadline:** 28 January 2025, 8:00 AM
 
 
 ## OUTPUT:
 
-<img src "output.png">
+<img src="output.png">
