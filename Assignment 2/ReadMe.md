@@ -120,4 +120,6 @@ MD Sayed
 
 ## OUTPUT:
 
+<img src="output.png">
+
 
