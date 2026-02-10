@@ -119,5 +119,5 @@ MD Sayed
 **Course:** Graphics Lab
 
 ## OUTPUT:
-<img src="output.png">
+
 
