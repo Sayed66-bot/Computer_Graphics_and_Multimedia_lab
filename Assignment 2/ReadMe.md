@@ -1,22 +1,108 @@
 
-# Setup
+🎨 Assignment
+Draw Two Cyan Colored Obtuse Triangles
+📌 Assignment Requirements
 
-## 1.  Windows ##
+This project creates an OpenGL window that:
 
-   * ### Download glfw libray from https://www.glfw.org/download.html. Download *64-bit Windows binaries* from *Windows pre-compiled binaries*. ###  
-   * ### Create **build** and **lib** folder in Code Repo. Put *glfw3.dll* from *lib-mingw-w64* folder of glfw library to **build** and **lib** folder.  ###
-   * ### For C++ compiler and make, Download MSYS2 Package Manager from https://www.msys2.org/ . ###  
-   * ### Run following commands in MSYS2 terminal: ````` and ```pacman -S gcc``` . ### 
-   * ### add your bin folder (which includes g++.exe and make.exe) PATH (C:\msys64\usr\bin) of msys64 installation directory in your environment variable.
-   * ### Run ```make win``` in Terminal. ###
-   * ### ```.exe``` file will be in **build** folder. ###
-   * ### if your code does not run, then you have to check openGL version by installing GLview from http://www.realtech-vr.com/home/glview . If your openGL version is below 3.3, then update windows. ### 
-   * ### ***if compiler says it cannot find khrplatform.h, then put this file https://github.com/nahin100/17-CSE4202/blob/main/Lab0/include/khrplatform.h in *include* folder. Also, change header file statement from ```#include <KHR/khrplatform.h>``` to ```#include "khrplatform.h"``` in *glad.h* file in include folder*** ### 
-   
-​
-## 2. Linux ##
+🔷 Draws two cyan colored obtuse triangles
 
-   * ### Run following command in Terminal:  ```sudo apt-get install libglfw3-dev``` ###  
-   * ### Create **build** and **lib** folder in Code Repo. ###
-   * ### Run ```make linux``` in terminal. ###
-   * ### executable file will be in **build** folder. ###
+📍 Positions them at two distant corners of the screen
+
+🟠 Uses an orange background
+
+🪟 Sets the window title to MD Sayed
+
+⌨ Closes the window when pressing the initial letter of my name (M)
+
+🪟 Window Information
+Feature	Value
+Window Title	MD Sayed
+Window Size	800 × 600
+Background Color	Orange (1.0, 0.5, 0.0)
+Triangle Color	Cyan (0.0, 1.0, 1.0)
+Exit Key	M
+🧠 Program Explanation
+
+GLFW is used to create the window and manage input.
+
+GLAD loads OpenGL function pointers.
+
+A Vertex Shader handles triangle positioning.
+
+A Fragment Shader sets the cyan color.
+
+Vertex data contains coordinates for two obtuse triangles:
+
+One in the top-left corner
+
+One in the bottom-right corner
+
+processInput() detects when the M key is pressed and closes the window.
+
+📂 Project Structure
+Project Folder
+│
+├── build/
+│   └── main.exe
+│
+├── include/
+│   ├── glad/
+│   └── GLFW/
+│
+├── lib/
+│   └── glfw3.dll
+│
+├── src/
+│   ├── main.cpp
+│   └── glad.c
+│
+├── Makefile
+└── README.md
+
+⚙️ Compilation (Windows – MinGW)
+g++ src/main.cpp src/glad.c -Iinclude -Llib -lglfw3 -lopengl32 -lgdi32 -o build/main.exe
+
+
+Make sure:
+
+glfw3.dll is placed inside the build folder
+
+MinGW is added to your system PATH
+
+▶ How to Run
+
+Open terminal inside the build folder
+
+Run:
+
+main.exe
+
+📷 Expected Output
+
+Orange background window titled MD Sayed
+
+Two cyan obtuse triangles at opposite corners
+
+Pressing M closes the window
+
+🛠 Technologies Used
+
+C++
+
+OpenGL 3.3 Core Profile
+
+GLFW
+
+GLAD
+
+MinGW (Windows)
+
+👨‍💻 Author
+
+MD Sayed
+**ID :** **0432320005101148**
+**Course:** Graphics Lab
+
+## OUTPUT:
+<img src="output.png">
