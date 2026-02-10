@@ -1,7 +1,8 @@
 
-🎨 Assignment
+## 🎨 Assignment
 Draw Two Cyan Colored Obtuse Triangles
-📌 Assignment Requirements
+
+## 📌 Assignment Requirements
 
 This project creates an OpenGL window that:
 
@@ -15,14 +16,15 @@ This project creates an OpenGL window that:
 
 ⌨ Closes the window when pressing the initial letter of my name (M)
 
-🪟 Window Information
+## 🪟 Window Information
 Feature	Value
 Window Title	MD Sayed
 Window Size	800 × 600
 Background Color	Orange (1.0, 0.5, 0.0)
 Triangle Color	Cyan (0.0, 1.0, 1.0)
 Exit Key	M
-🧠 Program Explanation
+
+## 🧠 Program Explanation
 
 GLFW is used to create the window and manage input.
 
@@ -40,7 +42,8 @@ One in the bottom-right corner
 
 processInput() detects when the M key is pressed and closes the window.
 
-📂 Project Structure
+## 📂 Project Structure
+```
 Project Folder
 │
 ├── build/
@@ -59,8 +62,11 @@ Project Folder
 │
 ├── Makefile
 └── README.md
+```
 
-⚙️ Compilation (Windows – MinGW)
+---
+
+## ⚙️ Compilation (Windows – MinGW)
 g++ src/main.cpp src/glad.c -Iinclude -Llib -lglfw3 -lopengl32 -lgdi32 -o build/main.exe
 
 
@@ -70,7 +76,7 @@ glfw3.dll is placed inside the build folder
 
 MinGW is added to your system PATH
 
-▶ How to Run
+## ▶ How to Run
 
 Open terminal inside the build folder
 
@@ -78,7 +84,7 @@ Run:
 
 main.exe
 
-📷 Expected Output
+## 📷 Expected Output
 
 Orange background window titled MD Sayed
 
@@ -86,7 +92,7 @@ Two cyan obtuse triangles at opposite corners
 
 Pressing M closes the window
 
-🛠 Technologies Used
+## 🛠 Technologies Used
 
 C++
 
@@ -98,7 +104,15 @@ GLAD
 
 MinGW (Windows)
 
-👨‍💻 Author
+## ✅ Notes
+
+* The code is fully written and tested on **my own computer**
+* Necessary comments are added inside the source files
+* No external or copied code was used
+
+---
+
+## 👨‍💻 Author
 
 MD Sayed
 **ID :** **0432320005101148**
@@ -106,3 +120,4 @@ MD Sayed
 
 ## OUTPUT:
 <img src="output.png">
+
