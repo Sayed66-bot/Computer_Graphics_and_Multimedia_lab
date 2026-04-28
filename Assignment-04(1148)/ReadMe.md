@@ -1,20 +1,58 @@
+##OpenGL Animated Triangle — 0432320005101148
+A simple OpenGL program that renders a single animated triangle using GLFW and GLAD.
 
-# Setup
+##Description
+The triangle animates smoothly between cyan and magenta using a sine-wave-based uniform color updated every frame. Keyboard controls allow the user to temporarily turn the triangle white or permanently stop the animation with red.
 
-## 1.  Windows ##
+##Features
 
-   * ### Download glfw libray from https://www.glfw.org/download.html. Download *64-bit Windows binaries* from *Windows pre-compiled binaries*. ###  
-   * ### Create **build** and **lib** folder in Code Repo. Put *glfw3.dll* from *lib-mingw-w64* folder of glfw library to **build** and **lib** folder.  ###
-   * ### For C++ compiler and make, Download MSYS2 Package Manager from https://www.msys2.org/ . ###  
-   * ### Run following commands in MSYS2 terminal: ```pacman -S base-devel``` and ```pacman -S gcc``` . ### 
-   * ### add your bin folder (which includes g++.exe and make.exe) PATH (C:\msys64\usr\bin) of msys64 installation directory in your environment variable.
-   * ### Run ```make win``` in Terminal. ###
-   * ### ```.exe``` file will be in **build** folder. ###
-   * ### if your code does not run, then you have to check openGL version by installing GLview from http://www.realtech-vr.com/home/glview . If your openGL version is below 3.3, then update windows. ### 
-​
-## 2. Linux ##
+Animated color transition: Cyan → Magenta (looping)
+Keyboard controls for color override
+Clean shader setup with uniform color passing
+Proper VAO/VBO setup and resource cleanup
 
-   * ### Run following command in Terminal:  ```sudo apt-get install libglfw3-dev``` ###  
-   * ### Create **build** and **lib** folder in Code Repo. ###
-   * ### Run ```make linux``` in terminal. ###
-   * ### executable file will be in **build** folder. ###
+
+##Controls
+KeyActionWTurn triangle white (momentary — hold to keep, release to resume animation)RTurn triangle red permanently (animation stops and does not resume)MClose the window
+
+##Dependencies
+
+GLFW — Window creation and input handling
+GLAD — OpenGL function pointer loader
+OpenGL 3.3 Core Profile
+
+
+##Project Structure
+├── main.cpp       # Main source file
+├── glad.h         # GLAD header
+├── glfw3.h        # GLFW header
+└── README.md
+
+##How to Build
+Linux / macOS
+bashg++ main.cpp glad.c -o triangle -lglfw -ldl
+./triangle
+Windows (MinGW)
+bashg++ main.cpp glad.c -o triangle.exe -lglfw3 -lopengl32 -lgdi32
+triangle.exe
+
+##Shader Details
+Vertex Shader — passes vertex positions directly to clip space.
+Fragment Shader — uses a uniform vec4 ourColor to receive color from the CPU each frame.
+The animation works by computing:
+cppfloat t = sin(glfwGetTime()) / 2.0 + 0.5;  // oscillates 0.0 → 1.0
+glUniform4f(location, 1.0f - t, t, 1.0f, 1.0f);
+// cyan (0,1,1) ↔ magenta (1,0,1)
+
+##Screenshots
+
+Attach screenshots showing:
+
+Default animated state (cyan/magenta)
+White state (W held)
+Red state (R pressed)
+
+
+
+##Author
+##Student ID: 0432320005101148
