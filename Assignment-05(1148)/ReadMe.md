@@ -42,6 +42,7 @@ Using:
 ```cpp
 float greenValue = sin(timeValue) / 2.0 + 0.5;
 
-## Aurthur
+
+# Aurthur
 ## MD Sayed
 ## ID:04323320005101148
