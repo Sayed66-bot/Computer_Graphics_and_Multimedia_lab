@@ -38,7 +38,7 @@ The rectangle smoothly changes between:
 - White
 
 Using:
-cpp
+-cpp
 float greenValue = sin(timeValue) / 2.0 + 0.5;
 
 ---
