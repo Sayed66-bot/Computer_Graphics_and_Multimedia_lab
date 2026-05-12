@@ -137,12 +137,11 @@ int main()
         // render the triangle
 
         glm::mat4 transform = glm::mat4(1.0f); //4x4 matrix in opengl --> set initially identity matrix,
-        float xOffset = sin(timeValue) * 0.5f;
-        transform = glm::translate(transform, glm::vec3(xOffset, xOffset, 0.0f));
+        
 
         transform = glm::rotate(transform,(float)glfwGetTime(), glm::vec3(0.0f, 0.0f, 1.0f));//0, 0, 1) means rotate around the Z-axis, which is perpendicular to the screen.In 2D, this gives the impression of spinning in place.
         //The Z-axis points out of the screen, so the rotation happens in the XY plane.
-        float scaleFactor = sin(glfwGetTime()) * 0.25f + 0.5f; // Sin gives a value between -1 and 1, so scale from 0.5 to 1.5
+        float scaleFactor = sin(glfwGetTime()) * 0.5f + 1.0f; // Sin gives a value between -1 and 1, so scale from 0.5 to 1.5
         transform = glm::scale(transform, glm::vec3(scaleFactor, scaleFactor, 1.0f));
      
 
